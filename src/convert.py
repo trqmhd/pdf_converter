@@ -14,7 +14,7 @@ OUTPUT_DIR = os.path.join(BASE_DIR, 'output/')
 def html_to_pdf():
     while True:
         try:
-            filename = input("What is the filename you want to convert?\n - ")
+            filename = input("What is the filename you want to convert(from 'input' folder)?\n - ")
             pdfkit.from_file( INPUT_DIR+ '/' + filename+'.html', OUTPUT_DIR+"/index.pdf")
             break
         except:
@@ -37,7 +37,7 @@ def url_to_pdf():
 
 
 print(" 1 : HTML\n 2 : String\n 3 : URL")
-file_type = input("What type of file (extension) you wanna convert? - Choose one of the following:\n")
+file_type = input("What type of file (extension) you wanna convert? - Choose one of the following from-(1/2/3):\n")
 
 
 options = {
