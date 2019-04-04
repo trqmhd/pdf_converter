@@ -12,16 +12,28 @@ OUTPUT_DIR = os.path.join(BASE_DIR, 'output/')
 
 
 def html_to_pdf():
-    filename = input("What is the filename you want to convert?\n - ")
-    pdfkit.from_file( INPUT_DIR+ '/' + filename+'.html', OUTPUT_DIR+"/index.pdf")
+    while True:
+        try:
+            filename = input("What is the filename you want to convert?\n - ")
+            pdfkit.from_file( INPUT_DIR+ '/' + filename+'.html', OUTPUT_DIR+"/index.pdf")
+            break
+        except:
+            print("Oops! No such file found in the directory.  Try again...")
 
 def string_to_pdf():
-    string = input("What are the strings you want to convert?\n - ")
-    pdfkit.from_string( string, OUTPUT_DIR +"/string.pdf")
+            string = input("What are the strings you want to convert?\n - ")
+            pdfkit.from_string( string, OUTPUT_DIR +"/string.pdf")
+
+
 
 def url_to_pdf():
-    url_name = input("What is the url you want to convert?\n  ")
-    pdfkit.from_url( url_name, OUTPUT_DIR+"/url_name.pdf")
+    while True:
+        try:
+            url_name = input("What is the url you want to convert?\n  ")
+            pdfkit.from_url( url_name, OUTPUT_DIR+"/url_name.pdf")
+            break
+        except:
+            print("Oops! Invalid URL.  Try again...🧐")
 
 
 print(" 1 : HTML\n 2 : String\n 3 : URL")
