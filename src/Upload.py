@@ -3,7 +3,7 @@ import os
 import boto3
 from boto.s3.key import Key
 
-#aws credential
+#aws credentials
 AWS_ACCESS_KEY_ID = ''
 AWS_SECRET_ACCESS_KEY = ''
 
